@@ -4,10 +4,10 @@ import "./globals.css";
 const italiana = Italiana({ variable: "--font-italiana", subsets: ["latin"], weight: "400" });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Organization","name":"MODEWEAR","description":"Koleksi fashion terbaru","url":"https://landing-modewear.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"Organization","name":"MODEWEAR","description":"Koleksi fashion terbaru","url":"https://modewear.pintuweb.com"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-modewear.vercel.app"),
+  metadataBase: new URL("https://modewear.pintuweb.com"),
   title: "MODEWEAR — Koleksi Fashion Terbaru",
   description: "MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.",
   applicationName: "MODEWEAR",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "MODEWEAR" }],
   creator: "MODEWEAR",
   publisher: "MODEWEAR",
-  alternates: { canonical: "https://landing-modewear.vercel.app" },
+  alternates: { canonical: "https://modewear.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-modewear.vercel.app",
+    url: "https://modewear.pintuweb.com",
     siteName: "MODEWEAR",
     title: "MODEWEAR — Koleksi Fashion Terbaru",
     description: "MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.",
