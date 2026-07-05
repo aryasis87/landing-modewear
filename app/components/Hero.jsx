@@ -50,7 +50,7 @@ const Hero = () => {
       style={{ minHeight: '90vh' }}
     >
       <Head>
-        <link rel="preload" href="/images/fashion.jpg" as="image" />
+        <link rel="preload" href="/images/k1.webp" as="image" />
       </Head>
 
       {/* Brand Logo */}
