@@ -1,29 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Italiana, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const italiana = Italiana({ variable: "--font-italiana", subsets: ["latin"], weight: "400" });
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata = {
-  title: "Modewear",
-  description:
-    "Desain futuristik dengan pattern celestial dan cutting avant-garde.",
-  author: "Sanzystore",
+  title: "MODEWEAR — Koleksi Fashion Terbaru",
+  description: "MODEWEAR: tampil stylish dengan koleksi terbaru untuk semua musim dan gaya hidup Anda.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${italiana.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
