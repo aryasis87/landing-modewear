@@ -42,7 +42,7 @@ const CountdownTimer = ({ targetDate = "2025-05-31T23:59:59" }) => {
 
   return (
     <section
-      className="py-16 bg-white"
+      className="py-16 bg-bone"
       role="timer"
       aria-label="Hitung mundur promo fashion"
     >
@@ -51,21 +51,16 @@ const CountdownTimer = ({ targetDate = "2025-05-31T23:59:59" }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-2"
+          className="text-sm font-semibold tracking-widest text-thread uppercase mb-2"
         >
           Promo Fashion Eksklusif
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-2xl sm:text-3xl font-light text-gray-800 mb-10"
-        >
+        <motion.p className="mb-10 text-2xl font-light text-onyx sm:text-3xl">
           Waktu hampir habis!
         </motion.p>
 
-        <div className="flex justify-center gap-4 sm:gap-6">
+        <div className="flex justify-center gap-2.5 sm:gap-4 md:gap-6">
           {items.map((item, i) => (
             <motion.div
               key={item.label}
@@ -74,15 +69,15 @@ const CountdownTimer = ({ targetDate = "2025-05-31T23:59:59" }) => {
               transition={{ delay: i * 0.1 + 0.3 }}
               className="flex flex-col items-center"
             >
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 rounded-xl flex items-center justify-center border border-gray-200">
+              <div className="relative flex h-16 w-16 items-center justify-center rounded-xl border border-onyx/12 bg-bone sm:h-20 sm:w-20 md:h-24 md:w-24">
                 <time
-                  className="text-2xl sm:text-3xl font-semibold text-gray-900"
+                  className="text-xl font-semibold text-onyx sm:text-2xl md:text-3xl"
                   dateTime={item.value.toString()}
                 >
                   {item.value.toString().padStart(2, "0")}
                 </time>
               </div>
-              <span className="mt-2 text-xs sm:text-sm uppercase tracking-wide text-gray-500">
+              <span className="mt-2 text-[0.65rem] uppercase tracking-wide text-thread sm:text-xs md:text-sm">
                 {item.label}
               </span>
             </motion.div>
@@ -93,7 +88,7 @@ const CountdownTimer = ({ targetDate = "2025-05-31T23:59:59" }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="mt-10 text-sm text-gray-500"
+          className="mt-10 text-sm text-thread"
         >
           Jangan lewatkan koleksi terbatas kami. Tampil beda di musim ini.
         </motion.p>

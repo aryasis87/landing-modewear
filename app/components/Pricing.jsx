@@ -64,7 +64,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-bone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Judul Bagian */}
         <motion.div 
@@ -74,29 +74,29 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-light text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-light text-onyx sm:text-4xl">
             Pilihan <span className="font-medium">membership fashion</span> yang fleksibel
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-thread">
             Temukan paket yang paling sesuai dengan gaya dan kebutuhan fashion kamu.
           </p>
 
           {/* Toggle */}
           <div className="mt-8 flex items-center justify-center">
-            <span className={`mr-4 text-sm font-medium ${!isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>Bulanan</span>
+            <span className={`mr-4 text-sm font-medium ${!isAnnual ? 'text-onyx' : 'text-thread'}`}>Bulanan</span>
             <button
               type="button"
-              className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              className="relative inline-flex h-6 w-11 items-center rounded-full bg-bone-2 transition-colors focus:outline-none focus:ring-2 focus:ring-rouge focus:ring-offset-2"
               onClick={() => setIsAnnual(!isAnnual)}
             >
               <span
                 className={`${
-                  isAnnual ? 'translate-x-6 bg-gray-900' : 'translate-x-1 bg-white'
+                  isAnnual ? 'translate-x-6 bg-onyx' : 'translate-x-1 bg-bone'
                 } inline-block h-4 w-4 transform rounded-full transition-transform`}
               />
             </button>
-            <span className={`ml-4 text-sm font-medium ${isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>
-              Tahunan <span className="text-green-600">(Hemat 20%)</span>
+            <span className={`ml-4 text-sm font-medium ${isAnnual ? 'text-onyx' : 'text-thread'}`}>
+              Tahunan <span className="text-rouge">(Hemat 20%)</span>
             </span>
           </div>
         </motion.div>
@@ -112,13 +112,13 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-xl border ${
                 plan.featured 
-                  ? 'border-gray-900 shadow-lg' 
-                  : 'border-gray-200 shadow-sm'
+                  ? 'border-onyx/25 shadow-lg' 
+                  : 'border-onyx/12 shadow-sm'
               }`}
             >
               {plan.featured && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="inline-flex items-center px-4 py-1 rounded-full bg-gray-900 text-xs font-medium text-white">
+                  <span className="inline-flex items-center px-4 py-1 rounded-full bg-onyx text-xs font-medium text-bone">
                     Paling Favorit
                   </span>
                 </div>
@@ -126,16 +126,16 @@ const Pricing = () => {
               
               <div className="p-8">
                 <h3 className={`text-lg font-medium ${
-                  plan.featured ? 'text-gray-900' : 'text-gray-700'
+                  plan.featured ? 'text-onyx' : 'text-onyx'
                 }`}>
                   {plan.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
+                <p className="mt-2 text-sm text-thread">{plan.description}</p>
                 
                 <div className="mt-6">
-                  <p className="text-4xl font-light tracking-tight text-gray-900">
+                  <p className="text-4xl font-light tracking-tight text-onyx">
                     {isAnnual ? plan.price.annual : plan.price.monthly}
-                    <span className="text-base font-medium text-gray-500">
+                    <span className="text-base font-medium text-thread">
                       {isAnnual ? '/tahun' : '/bulan'}
                     </span>
                   </p>
@@ -145,7 +145,7 @@ const Pricing = () => {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
                       <svg
-                        className="h-5 w-5 flex-shrink-0 text-green-500 mt-0.5"
+                        className="h-5 w-5 flex-shrink-0 text-rouge mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -157,7 +157,7 @@ const Pricing = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="ml-3 text-gray-600">{feature}</span>
+                      <span className="ml-3 text-thread">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -165,8 +165,8 @@ const Pricing = () => {
                 <button
                   className={`mt-8 w-full px-6 py-3 border text-base font-medium rounded-md transition-all ${
                     plan.featured
-                      ? 'bg-gray-900 text-white hover:bg-gray-800'
-                      : 'bg-white text-gray-900 border-gray-300 hover:bg-gray-50'
+                      ? 'bg-onyx text-bone hover:bg-onyx'
+                      : 'bg-bone text-onyx border-onyx/12 hover:bg-bone'
                   }`}
                 >
                   {plan.cta}
@@ -184,10 +184,10 @@ const Pricing = () => {
           transition={{ delay: 0.3 }}
           className="mt-16 text-center"
         >
-          <p className="text-sm font-medium text-gray-500 mb-4">
+          <p className="text-sm font-medium text-thread mb-4">
             BUTUH PENGALAMAN BERGAYA YANG LEBIH PERSONAL?
           </p>
-          <button className="px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-all">
+          <button className="px-6 py-3 border border-onyx/12 text-base font-medium rounded-md text-onyx bg-bone hover:bg-bone transition-all">
             Hubungi Tim Fashion Concierge
           </button>
         </motion.div>

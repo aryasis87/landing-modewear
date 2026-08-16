@@ -38,7 +38,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-bone">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div 
@@ -48,10 +48,10 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-light text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-light text-onyx">
             Pertanyaan <span className="font-medium">Umum</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-thread">
             Info penting seputar pembelian, pengiriman, dan layanan kami.
           </p>
         </motion.div>
@@ -71,18 +71,18 @@ const FAQ = () => {
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 }
               }}
-              className="overflow-hidden rounded-lg border border-gray-200"
+              className="overflow-hidden rounded-lg border border-onyx/12"
             >
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-6 py-5 flex justify-between items-center text-left bg-white hover:bg-gray-50 transition"
+                className="w-full px-6 py-5 flex justify-between items-center text-left bg-bone hover:bg-bone transition"
                 aria-expanded={activeIndex === index}
               >
-                <h3 className="text-base sm:text-lg font-medium text-gray-900">
+                <h3 className="text-base sm:text-lg font-medium text-onyx">
                   {faq.question}
                 </h3>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 text-thread transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -98,7 +98,7 @@ const FAQ = () => {
                 }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-5 pt-0 text-sm text-gray-600">
+                <div className="px-6 pb-5 pt-0 text-sm text-thread">
                   {faq.answer}
                 </div>
               </motion.div>
@@ -114,10 +114,10 @@ const FAQ = () => {
           transition={{ delay: 0.3 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm font-medium text-gray-500 mb-4">
+          <p className="text-sm font-medium text-thread mb-4">
             MASIH BUTUH BANTUAN?
           </p>
-          <button className="inline-flex px-6 py-3 border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 rounded-md transition text-sm sm:text-base font-medium">
+          <button className="inline-flex px-6 py-3 border border-onyx/12 bg-bone hover:bg-bone text-onyx rounded-md transition text-sm sm:text-base font-medium">
             Hubungi Tim Kami
           </button>
         </motion.div>

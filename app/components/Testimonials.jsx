@@ -41,7 +41,7 @@ const Testimonials = () => {
   }, [controls, inView]);
 
   return (
-    <section ref={ref} className="py-24 bg-gray-50">
+    <section ref={ref} className="py-24 bg-bone">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -57,10 +57,10 @@ const Testimonials = () => {
             },
           }}
         >
-          <h2 className="text-3xl font-light text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-light text-onyx sm:text-4xl">
             Dipercaya oleh <span className="font-medium">Para Pemimpin Industri</span>
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-thread">
             Para profesional di organisasi terkemuka berbagi pengalaman mereka.
           </p>
         </motion.div>
@@ -93,7 +93,7 @@ const Testimonials = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white p-10 rounded-xl shadow-sm border border-gray-200">
+                <div className="bg-bone p-10 rounded-xl shadow-sm border border-onyx/12">
                   <div className="flex flex-col items-center text-center">
                     <motion.img
                       src={testimonial.image}
@@ -104,7 +104,7 @@ const Testimonials = () => {
                       transition={{ duration: 0.6, delay: 0.5 }}
                     />
                     <motion.blockquote
-                      className="text-xl font-light text-gray-700 max-w-2xl leading-relaxed"
+                      className="text-xl font-light text-onyx max-w-2xl leading-relaxed"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.7 }}
@@ -117,10 +117,10 @@ const Testimonials = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.9 }}
                     >
-                      <h3 className="text-lg font-medium text-gray-900">
+                      <h3 className="text-lg font-medium text-onyx">
                         {testimonial.name}
                       </h3>
-                      <p className="text-gray-500 text-sm mt-1">
+                      <p className="text-thread text-sm mt-1">
                         {testimonial.role}
                       </p>
                     </motion.div>
@@ -138,12 +138,12 @@ const Testimonials = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <p className="text-xs font-medium text-gray-500 tracking-wider mb-6">
+          <p className="text-xs font-medium text-thread tracking-wider mb-6">
             DIPERCAYA OLEH PERUSAHAAN INOVATIF DI SELURUH DUNIA
           </p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-80">
             {['Forbes', 'TechCrunch', 'Bloomberg', 'Harvard Business Review', 'The Economist'].map((company, i) => (
-              <span key={i} className="text-base font-medium text-gray-700">{company}</span>
+              <span key={i} className="text-base font-medium text-onyx">{company}</span>
             ))}
           </div>
         </motion.div>

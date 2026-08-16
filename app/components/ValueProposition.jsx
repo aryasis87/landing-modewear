@@ -67,7 +67,7 @@ const ValueProposition = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-bone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -76,10 +76,10 @@ const ValueProposition = () => {
           variants={container}
           className="text-center mb-16"
         >
-          <motion.h2 variants={item} className="text-3xl font-light text-gray-900 sm:text-4xl">
+          <motion.h2 variants={item} className="text-3xl font-light text-onyx sm:text-4xl">
             Why <span className="font-medium">Fashion Lovers</span> Choose Us
           </motion.h2>
-          <motion.p variants={item} className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+          <motion.p variants={item} className="mt-4 max-w-2xl mx-auto text-lg text-thread">
             Every detail is curated with intention — from fabrics to fit — delivering statement style with lasting value.
           </motion.p>
         </motion.div>
@@ -98,15 +98,15 @@ const ValueProposition = () => {
               whileHover={{ y: -5 }}
               className="relative"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
-              <div className="relative h-full bg-white p-8 rounded-lg border border-gray-100 shadow-lg">
+              <div className="absolute -inset-1 bg-gradient-to-r from-rouge to-rouge rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
+              <div className="relative h-full bg-bone p-8 rounded-lg border border-onyx/12 shadow-lg">
                 <div className="flex justify-center">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-pink-50 text-pink-600">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-rouge/12 text-rouge">
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">{feature.title}</h3>
-                <p className="mt-2 text-base text-gray-600">{feature.description}</p>
+                <h3 className="mt-6 text-lg font-medium text-onyx">{feature.title}</h3>
+                <p className="mt-2 text-base text-thread">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -119,12 +119,12 @@ const ValueProposition = () => {
           transition={{ delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm font-medium text-gray-500">
+          <p className="text-sm font-medium text-thread">
             WORN BY STYLE ICONS WORLDWIDE
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-8 opacity-70">
             {['Vogue', 'Elle', 'GQ', 'Harper’s Bazaar', 'Hypebeast', 'WWD'].map((brand) => (
-              <span key={brand} className="text-lg font-medium text-gray-700">{brand}</span>
+              <span key={brand} className="text-lg font-medium text-onyx">{brand}</span>
             ))}
           </div>
         </motion.div>

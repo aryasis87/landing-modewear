@@ -1,28 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================================================
+   modewear — bahasa rupa LABEL JAHIT.
+   Busana dikenali dari labelnya: huruf tipis berjarak lebar, kain tulang,
+   dan jahitan tipis sebagai garis pemisah.
+   ========================================================================== */
+
+@theme {
+  --color-onyx: #141414; /* hitam label */
+  --color-onyx-2: #262626;
+  --color-bone: #f7f5f1; /* kain tulang */
+  --color-bone-2: #e8e4dc;
+  --color-thread: #6b6459; /* teks sekunder */
+  --color-rouge: #8c2c36; /* merah benang */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  body { font-family: var(--font-inter), system-ui, sans-serif; background-color: var(--color-bone); color: var(--color-thread); }
+  h1, h2, h3 { font-family: var(--font-italiana), Georgia, serif; letter-spacing: -0.02em; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.stitch { background-image: linear-gradient(to right, currentColor 0 4px, transparent 4px 8px); background-size: 8px 1px; background-repeat: repeat-x; height: 1px; opacity: 0.4; }
+.label-caps { font-size: 0.6875rem; letter-spacing: 0.34em; text-transform: uppercase; font-weight: 500; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--color-rouge);
+  outline-offset: 3px;
 }
-
-h1, h2, h3 { font-family: var(--font-italiana), Georgia, serif; letter-spacing: 0.02em; }

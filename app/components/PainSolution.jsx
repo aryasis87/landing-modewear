@@ -45,9 +45,9 @@ const PainSolution = () => {
   };
 
   const item = {
-    hidden: { x: -20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -58,9 +58,9 @@ const PainSolution = () => {
   };
 
   const solutionItem = {
-    hidden: { x: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -71,7 +71,7 @@ const PainSolution = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-bone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -80,10 +80,10 @@ const PainSolution = () => {
           variants={container}
           className="text-center mb-20"
         >
-          <motion.h2 variants={item} className="text-3xl font-light text-gray-900 sm:text-4xl">
+          <motion.h2 variants={item} className="text-3xl font-light text-onyx sm:text-4xl">
             The <span className="font-medium">Fashion Challenges</span> We Solve
           </motion.h2>
-          <motion.p variants={item} className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+          <motion.p variants={item} className="mt-4 max-w-3xl mx-auto text-lg text-thread">
             Fashion is all about staying ahead of the curve. Let us help you solve these challenges and bring your style to life.
           </motion.p>
         </motion.div>
@@ -101,33 +101,33 @@ const PainSolution = () => {
               {/* Pain Point */}
               <motion.div 
                 variants={item}
-                className="bg-white p-8 rounded-xl shadow-sm border border-gray-200"
+                className="bg-bone p-8 rounded-xl shadow-sm border border-onyx/12"
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-2 rounded-lg bg-red-50 text-red-600">
+                  <div className="p-2 rounded-lg bg-rouge/12 text-rouge">
                     {point.icon}
                   </div>
-                  <h3 className="ml-3 text-lg font-medium text-gray-900">Fashion Dilemma</h3>
+                  <h3 className="ml-3 text-lg font-medium text-onyx">Fashion Dilemma</h3>
                 </div>
-                <p className="text-gray-700 text-lg">{point.pain}</p>
+                <p className="text-onyx text-lg">{point.pain}</p>
               </motion.div>
 
               {/* Our Solution */}
               <motion.div 
                 variants={solutionItem}
-                className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 relative overflow-hidden"
+                className="bg-bone p-8 rounded-xl shadow-sm border border-onyx/12 relative overflow-hidden"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-60 z-0"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-rouge to-rouge opacity-60 z-0"></div>
                 <div className="relative z-10">
                   <div className="flex items-center mb-4">
-                    <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
+                    <div className="p-2 rounded-lg bg-rouge/12 text-rouge">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="ml-3 text-lg font-medium text-gray-900">Our Stylish Solution</h3>
+                    <h3 className="ml-3 text-lg font-medium text-onyx">Our Stylish Solution</h3>
                   </div>
-                  <p className="text-gray-700 text-lg">{point.solution}</p>
+                  <p className="text-onyx text-lg">{point.solution}</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -141,12 +141,12 @@ const PainSolution = () => {
           transition={{ delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm font-medium text-gray-500">
+          <p className="text-sm font-medium text-thread">
             SEE WHAT OTHERS ARE SAYING ABOUT OUR STYLE
           </p>
           <motion.div 
             whileHover={{ scale: 1.02 }}
-            className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 cursor-pointer transition-all duration-300"
+            className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-bone bg-onyx hover:bg-onyx cursor-pointer transition-all duration-300"
           >
             Discover Our Lookbooks
           </motion.div>
