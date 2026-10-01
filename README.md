@@ -1,10 +1,10 @@
-# MODEWEAR — Koleksi Fashion Terbaru
+# Modewear — Pakaian Kerja yang Dijahit Setelah Dipesan
 
-MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.
+Modewear Kapsul 05 "Kota": delapan potong pakaian kerja dari satu palet, dijahit setelah dipesan. Pra-pesan ditutup 25 Oktober 2026; panduan ukuran tersedia.
 
 **Demo live:** https://landing-modewear.vercel.app
 
-![Tangkapan layar MODEWEAR](public/og.jpg)
+![Tangkapan layar Modewear](public/og.jpg)
 
 > Template landing page untuk bisnis fiktif. Formulir di dalamnya hanya demo dan tidak mengirim data.
 
@@ -14,14 +14,16 @@ Bahasa rupa **Label Jahit**: huruf tipis berjarak lebar, warna kain tulang, dan 
 
 ## Halaman
 
-`/`
+- `/` — Kapsul 05 "Kota": hitung mundur pra-pesan, prinsip, lookbook
+- `/koleksi` — delapan potong dengan saringan jenis
+- `/koleksi/[slug]` — detail item, contoh kain, label jahit, dan simbol perawatan
+- `/panduan-ukuran` — pencari ukuran dari tiga lingkar badan dan tabel ukuran
 
 ## Teknologi
 
 - Next.js 15.5 (App Router) dan React 19
 - Tailwind CSS v4
 - JavaScript
-- Heroicons, Framer Motion, Swiper
 - Font: Italiana, Inter (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
