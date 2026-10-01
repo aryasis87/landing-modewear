@@ -1,19 +1,16 @@
-// app/not-found.js
-import Link from 'next/link';
+import Link from "next/link";
+
+export const metadata = { title: "Halaman tidak ditemukan" };
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white text-gray-800 font-sans">
-      <div className="text-center max-w-lg px-6 py-12">
-        <h1 className="text-6xl font-extrabold mb-4 text-gray-900">404</h1>
-        <p className="text-lg mb-6 text-gray-600">Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
-        <Link
-          href="/"
-          className="inline-block bg-gray-900 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-gray-800 transition duration-300"
-        >
-          Go Back Home
-        </Link>
+    <main className="flex min-h-[80vh] items-center bg-bone px-6 pt-20">
+      <div className="label-jahit mx-auto max-w-md px-10 py-12 text-center">
+        <p className="label-caps text-rouge">Modewear · 404</p>
+        <h1 className="mt-4 text-5xl text-onyx">Labelnya terlepas</h1>
+        <p className="mt-4 leading-relaxed text-thread">Halaman ini tidak ada. Mungkin alamatnya salah ketik.</p>
+        <Link href="/koleksi" className="mt-7 inline-flex bg-onyx px-6 py-3.5 text-sm font-semibold tracking-wide text-bone hover:bg-rouge">Lihat koleksi</Link>
       </div>
-    </div>
+    </main>
   );
 }

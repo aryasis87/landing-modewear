@@ -1,16 +1,16 @@
 import { Italiana, Inter } from "next/font/google";
-import MotionProvider from "./components/MotionProvider";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import "./globals.css";
 
 const italiana = Italiana({ variable: "--font-italiana", subsets: ["latin"], weight: "400" });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Organization","name":"MODEWEAR","description":"Koleksi fashion terbaru","url":"https://landing-modewear.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"ClothingStore","name":"Modewear","description":"Label pakaian kerja yang dijahit setelah dipesan","url":"https://landing-modewear.vercel.app"};
 
 export const metadata = {
   metadataBase: new URL("https://landing-modewear.vercel.app"),
-  title: "MODEWEAR — Koleksi Fashion Terbaru",
-  description: "MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.",
+  title: { default: "Modewear — Pakaian Kerja yang Dijahit Setelah Dipesan", template: "%s — Modewear" },
+  description: "Modewear Kapsul 05 \"Kota\": delapan potong pakaian kerja dari satu palet, dijahit setelah dipesan. Pra-pesan ditutup 25 Oktober 2026; panduan ukuran tersedia.",
   applicationName: "MODEWEAR",
   keywords: ["fashion", "koleksi fashion", "pakaian", "online fashion store", "gaya"],
   authors: [{ name: "MODEWEAR" }],
@@ -22,14 +22,14 @@ export const metadata = {
     locale: "id_ID",
     url: "https://landing-modewear.vercel.app",
     siteName: "MODEWEAR",
-    title: "MODEWEAR — Koleksi Fashion Terbaru",
-    description: "MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "MODEWEAR — Koleksi Fashion Terbaru" }],
+    title: "Modewear — Pakaian Kerja yang Dijahit Setelah Dipesan",
+    description: "Modewear Kapsul 05 \"Kota\": delapan potong pakaian kerja dari satu palet, dijahit setelah dipesan. Pra-pesan ditutup 25 Oktober 2026; panduan ukuran tersedia.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Modewear — Pakaian Kerja yang Dijahit Setelah Dipesan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MODEWEAR — Koleksi Fashion Terbaru",
-    description: "MODEWEAR: tampil stylish dengan koleksi fashion terbaru untuk semua musim dan gaya hidupmu.",
+    title: "Modewear — Pakaian Kerja yang Dijahit Setelah Dipesan",
+    description: "Modewear Kapsul 05 \"Kota\": delapan potong pakaian kerja dari satu palet, dijahit setelah dipesan. Pra-pesan ditutup 25 Oktober 2026; panduan ukuran tersedia.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -43,7 +43,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className={`${italiana.variable} ${inter.variable} antialiased`}>
-        <MotionProvider>{children}</MotionProvider>
+        <a href="#konten" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-onyx focus:px-4 focus:py-2 focus:text-bone">Lompat ke konten</a>
+        <SiteHeader />
+        <div id="konten">{children}</div>
+        <SiteFooter />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
     </html>
